@@ -66,6 +66,11 @@ main {
   background-color: lightseagreen;
 }
 
+#content button:disabled {
+  background-color: gray;
+  cursor: progress;
+}
+
 /* Image ---------------------------*/
 #photos {
   display: flex;
