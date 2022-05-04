@@ -7,6 +7,18 @@ body {
   overflow-y: hidden;
 }
 
+@media screen and (max-width: 820px) {
+  body {
+    margin: 0 75px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    margin: 0 36px;
+  }
+}
+
 /* Header -------------------------*/
 header {
   font-size: 12px;
@@ -33,16 +45,33 @@ header li {
   color: purple;
 }
 
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+}
 /* Main ----------------------------*/
 main {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: 35% 65%;
+  column-gap: 24px;
   max-width: 100%;
   max-height: 80%;
 }
 
+@media screen and (max-width: 650px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+}
+
 /* Content -------------------------*/
+#content {
+  align-self: center;
+}
+
 #content h2 {
   font-size: 36px;
 }
@@ -71,6 +100,26 @@ main {
   cursor: progress;
 }
 
+#content img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 950px) {
+  #content h2 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #content {
+    margin: 0 0 32px;
+  }
+
+  #content img {
+    display: none;
+  }
+}
+
 /* Image ---------------------------*/
 #photos {
   display: flex;
@@ -85,6 +134,12 @@ main {
   border-radius: 8px;
   box-shadow: 4px 4px 8px 2px gray;
   display: none;
+}
+
+@media screen and (max-width: 650px) {
+  #api-image {
+    max-height: 350px;
+  }
 }
 
 #spinner {
