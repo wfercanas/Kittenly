@@ -1,4 +1,4 @@
-const URL = "https://api.thecatapi.com/v1/images/search";
+const API_URL = "https://api.thecatapi.com/v1/images/search";
 
 const image = $("api-image");
 const spinner = $("spinner");
@@ -36,6 +36,6 @@ async function getNewImage(url) {
 
 button.addEventListener("click", () => {
   toggleLoading();
-  getNewImage(URL);
+  getNewImage(API_URL);
 });
-getNewImage(URL);
+getNewImage(API_URL);
