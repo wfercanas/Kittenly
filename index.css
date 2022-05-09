@@ -3,8 +3,6 @@ body {
   margin: 0 150px;
   display: grid;
   grid-template-rows: auto 1fr;
-  height: 100vh;
-  overflow-y: hidden;
 }
 
 @media screen and (max-width: 820px) {
@@ -157,4 +155,14 @@ main {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* Error -----------------------*/
+#error {
+  font-size: 10px;
+  background-color: brown;
+  color: white;
+  text-align: center;
+  height: min-content;
+  margin: 0;
 }
