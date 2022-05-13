@@ -1,6 +1,6 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0 150px;
+  margin: 0 100px;
   display: grid;
   grid-template-rows: auto 1fr;
 }
@@ -66,10 +66,6 @@ main {
 }
 
 /* Content -------------------------*/
-#content {
-  align-self: center;
-}
-
 #content h2 {
   font-size: 36px;
 }
@@ -120,17 +116,62 @@ main {
 
 /* Image ---------------------------*/
 #photos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 14px;
+  padding: 16px;
+  justify-items: center;
   align-items: center;
-  gap: 24px;
+}
+
+#photos h3 {
+  font-size: 14px;
+  font-weight: normal;
+  color: purple;
+  width: 100%;
+}
+
+#photos-favorites {
+  display: flex;
+  gap: 8px;
+  overflow-x: scroll;
+  max-width: 75%;
+  max-height: 100px;
+}
+
+#photos-favorites figure {
+  position: relative;
+  margin: 0 0 8px;
+}
+
+#photos-favorites .cat {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#photos-favorites .cross__button {
+  position: absolute;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  width: 18px;
+  height: auto;
+}
+
+#photos-favorites .cross__button img:hover {
+  cursor: pointer;
+  scale: 1.2;
 }
 
 #photos-image {
   position: relative;
   max-width: 70%;
-  max-height: 400px;
+  max-height: 280px;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -152,7 +193,7 @@ main {
 
 #api-image {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   border-radius: inherit;
   box-shadow: 4px 4px 8px 2px gray;
@@ -196,6 +237,7 @@ main {
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  justify-self: center;
 }
 
 @keyframes loading {
