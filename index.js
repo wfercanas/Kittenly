@@ -1,4 +1,4 @@
-const API_KEY = process.env.API_KEY;
+import { API_KEY } from "./key.js";
 
 const API = "https://api.thecatapi.com/v1";
 const RANDOM_ENDPOINT = "/images/search";
