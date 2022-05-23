@@ -1,3 +1,5 @@
+const API_KEY = process.env.API_KEY;
+
 const API = "https://api.thecatapi.com/v1";
 const RANDOM_ENDPOINT = "/images/search";
 const FAVORITES_ENDPOINT = "/favourites";
